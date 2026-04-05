@@ -4,6 +4,7 @@ public class Product
 {
     public Guid Id { get; private set; }
     public Guid SellerId { get; private set; }
+<<<<<<< HEAD
     public string SellerName { get; private set; } = default!;   // snapshot
     public Guid? CategoryId { get; private set; }
     public string Name { get; private set; } = default!;
@@ -11,6 +12,12 @@ public class Product
     public string? Description { get; private set; }
     public decimal BasePrice { get; private set; }
     public string? MainImageUrl { get; private set; }
+=======
+    public Guid? CategoryId { get; private set; }
+    public string Name { get; private set; } = default!;
+    public string? Description { get; private set; }
+    public decimal BasePrice { get; private set; }
+>>>>>>> feature/orders-logic
     public bool IsActive { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
@@ -22,6 +29,7 @@ public class Product
 
     public static Product Create(
         Guid sellerId,
+<<<<<<< HEAD
         string sellerName,
         Guid? categoryId,
         string name,
@@ -29,6 +37,12 @@ public class Product
         string? description,
         decimal basePrice,
         string? mainImageUrl = null)
+=======
+        Guid? categoryId,
+        string name,
+        string? description,
+        decimal basePrice)
+>>>>>>> feature/orders-logic
     {
         if (basePrice < 0)
             throw new ArgumentException("Base price cannot be negative.", nameof(basePrice));
@@ -37,6 +51,7 @@ public class Product
         {
             Id = Guid.NewGuid(),
             SellerId = sellerId,
+<<<<<<< HEAD
             SellerName = sellerName,
             CategoryId = categoryId,
             Name = name,
@@ -44,6 +59,12 @@ public class Product
             Description = description,
             BasePrice = basePrice,
             MainImageUrl = mainImageUrl,
+=======
+            CategoryId = categoryId,
+            Name = name,
+            Description = description,
+            BasePrice = basePrice,
+>>>>>>> feature/orders-logic
             IsActive = true,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow

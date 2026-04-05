@@ -1,5 +1,8 @@
 using Ecommerce.Identity.Infrastructure;
+<<<<<<< HEAD
 using Ecommerce.Shared.Abstractions;
+=======
+>>>>>>> feature/orders-logic
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Wolverine.EntityFrameworkCore;
@@ -19,8 +22,11 @@ public static class IdentityModule
             opts.UseNpgsql(connectionString)
                 .UseSnakeCaseNamingConvention());
 
+<<<<<<< HEAD
         services.AddScoped<IIdentityIntegrationService, IdentityIntegrationService>();
 
+=======
+>>>>>>> feature/orders-logic
         return services;
     }
 }

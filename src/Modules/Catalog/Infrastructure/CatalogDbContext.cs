@@ -11,7 +11,10 @@ public class CatalogDbContext : DbContext
     public DbSet<Product> Products => Set<Product>();
     public DbSet<ProductVariant> ProductVariants => Set<ProductVariant>();
     public DbSet<Category> Categories => Set<Category>();
+<<<<<<< HEAD
     public DbSet<Seller> Sellers => Set<Seller>();
+=======
+>>>>>>> feature/orders-logic
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -23,6 +26,7 @@ public class CatalogDbContext : DbContext
             e.HasKey(p => p.Id);
             e.Property(p => p.Id).HasColumnName("id");
             e.Property(p => p.SellerId).HasColumnName("seller_id").IsRequired();
+<<<<<<< HEAD
             e.Property(p => p.SellerName).HasColumnName("seller_name").IsRequired().HasMaxLength(500);
             e.Property(p => p.CategoryId).HasColumnName("category_id");
             e.Property(p => p.Name).HasColumnName("name").IsRequired().HasMaxLength(500);
@@ -35,6 +39,19 @@ public class CatalogDbContext : DbContext
             e.Property(p => p.CreatedAt).HasColumnName("created_at").HasDefaultValueSql("NOW()");
             e.Property(p => p.UpdatedAt).HasColumnName("updated_at").HasDefaultValueSql("NOW()");
             e.HasIndex(p => p.Slug).IsUnique();
+=======
+            e.Property(p => p.CategoryId).HasColumnName("category_id");
+            e.Property(p => p.Name).HasColumnName("name").IsRequired().HasMaxLength(500);
+            e.Property(p => p.Description).HasColumnName("description");
+            e.Property(p => p.BasePrice).HasColumnName("base_price")
+                .HasColumnType("numeric(12,2)").IsRequired();
+            e.Property(p => p.IsActive).HasColumnName("is_active").HasDefaultValue(true);
+            e.Property(p => p.CreatedAt).HasColumnName("created_at")
+                .HasDefaultValueSql("NOW()");
+            e.Property(p => p.UpdatedAt).HasColumnName("updated_at")
+                .HasDefaultValueSql("NOW()");
+
+>>>>>>> feature/orders-logic
             e.Ignore(p => p.Variants);
         });
 
@@ -61,6 +78,7 @@ public class CatalogDbContext : DbContext
             e.Property(c => c.Name).HasColumnName("name").IsRequired();
             e.Property(c => c.Slug).HasColumnName("slug").IsRequired();
             e.HasIndex(c => c.Slug).IsUnique();
+<<<<<<< HEAD
             e.HasMany(c => c.Children)
              .WithOne()
              .HasForeignKey(c => c.ParentId)
@@ -83,6 +101,8 @@ public class CatalogDbContext : DbContext
             e.Property(s => s.UpdatedAt).HasColumnName("updated_at").HasDefaultValueSql("NOW()");
             e.HasIndex(s => s.UserId).IsUnique();
             e.HasIndex(s => s.StripeAccountId).IsUnique().HasFilter("stripe_account_id IS NOT NULL");
+=======
+>>>>>>> feature/orders-logic
         });
     }
 }

@@ -1,5 +1,8 @@
 using Ecommerce.Catalog.Infrastructure;
+<<<<<<< HEAD
 using Ecommerce.Shared.Abstractions;
+=======
+>>>>>>> feature/orders-logic
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,8 +18,11 @@ public static class CatalogModule
             opts.UseNpgsql(connectionString)
                 .UseSnakeCaseNamingConvention());
 
+<<<<<<< HEAD
         services.AddScoped<ICatalogIntegrationService, CatalogIntegrationService>();
 
+=======
+>>>>>>> feature/orders-logic
         return services;
     }
 }
