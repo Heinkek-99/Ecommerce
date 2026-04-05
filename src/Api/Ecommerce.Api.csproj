@@ -2,19 +2,31 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Ecommerce.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Ecommerce.Identity.csproj" />
     <ProjectReference Include="..\Modules\Catalog\Ecommerce.Catalog.csproj" />
     <ProjectReference Include="..\Modules\Loyalty\Ecommerce.Loyalty.csproj" />
     <ProjectReference Include="..\Modules\Notifications\Ecommerce.Notifications.csproj" />
     <ProjectReference Include="..\Modules\Orders\Ecommerce.Orders.csproj" />
     <ProjectReference Include="..\Modules\Promotions\Ecommerce.Promotions.csproj" />
+    <ProjectReference Include="..\Modules\Cart\Ecommerce.Cart.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
-    <PackageReference Include="MediatR" Version="14.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Stripe.net" Version="51.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="WolverineFx" Version="3.7.0" />
+    <PackageReference Include="WolverineFx.Http" Version="3.7.0" />
+    <PackageReference Include="WolverineFx.Postgresql" Version="3.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <PropertyGroup>
