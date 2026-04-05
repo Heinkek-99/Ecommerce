@@ -20,6 +20,10 @@ public static class ModuleExtensions
         await MigrateAsync<PromotionsDbContext>(scope);
         await MigrateAsync<LoyaltyDbContext>(scope);
         await MigrateAsync<NotificationsDbContext>(scope);
+
+        // Seed notification templates (idempotent)
+        var notifDb = scope.ServiceProvider.GetRequiredService<NotificationsDbContext>();
+        await NotificationTemplateSeed.SeedAsync(notifDb);
     }
 
     private static async Task MigrateAsync<TContext>(IServiceScope scope)

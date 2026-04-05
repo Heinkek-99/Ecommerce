@@ -1,5 +1,10 @@
 using System.Text;
+using DotNetEnv;
 using Ecommerce.Api.Extensions;
+using Ecommerce.Cart.Extensions;
+using Ecommerce.Infrastructure.Stripe;
+using Ecommerce.Shared.Abstractions;
+using Stripe;
 using Ecommerce.Catalog.Extensions;
 using Ecommerce.Identity.Extensions;
 using Ecommerce.Infrastructure.Cache;
@@ -14,6 +19,9 @@ using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Wolverine;
 
+// Load .env before anything else (no-op if file absent in prod)
+Env.Load();
+
 // 1. Serilog early init
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -22,6 +30,10 @@ Log.Logger = new LoggerConfiguration()
 try
 {
     var builder = WebApplication.CreateBuilder(args);
+
+    // Map .env variables → IConfiguration nested keys
+    builder.Configuration.AddEnvironmentVariables();
+    builder.Configuration.MapEnvToConfiguration();
 
     // 1. Serilog
     builder.Host.UseSerilog((ctx, lc) => lc
@@ -41,6 +53,15 @@ try
     builder.Services.AddPromotionsModule(connectionString);
     builder.Services.AddLoyaltyModule(connectionString);
     builder.Services.AddNotificationsModule(connectionString);
+    builder.Services.AddCartModule();
+
+    // Stripe
+    var stripeSettings = builder.Configuration.GetSection("Stripe").Get<StripeSettings>()
+        ?? new StripeSettings(string.Empty, string.Empty, string.Empty, 0.05m);
+    StripeConfiguration.ApiKey = stripeSettings.SecretKey;
+    builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+    builder.Services.AddScoped<IStripePaymentService, StripePaymentService>();
+    builder.Services.AddScoped<IStripeConnectService, StripeConnectService>();
 
     // 3. Redis
     builder.Services.AddStackExchangeRedisCache(opts => opts.Configuration = redisConnection);
@@ -54,7 +75,8 @@ try
     builder.Services.AddValidatorsFromAssemblyContaining<Ecommerce.Notifications.Application.AssemblyMarker>();
 
     // 5. JWT Bearer
-    var jwtKey = builder.Configuration["Jwt:Key"] ?? "ecommerce-super-secret-key-32chars!!";
+    var jwtKey = builder.Configuration["JwtSettings:SecretKey"]
+        ?? "ecommerce-super-secret-key-32chars!!";
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(opts =>
         {
@@ -87,6 +109,8 @@ try
             typeof(Ecommerce.Loyalty.Application.AssemblyMarker).Assembly);
         opts.Discovery.IncludeAssembly(
             typeof(Ecommerce.Notifications.Application.AssemblyMarker).Assembly);
+        opts.Discovery.IncludeAssembly(
+            typeof(Ecommerce.Cart.Application.AssemblyMarker).Assembly);
 
         // Jobs récurrents : enregistrés comme IHostedService
         // (Wolverine Scheduler API for periodic jobs requires separate configuration per version)
@@ -104,6 +128,9 @@ try
         c.SwaggerDoc("v1", new() { Title = "Ecommerce API", Version = "v1" });
         c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
         {
+            Description = "JWT token. Exemple: Bearer eyJ...",
+            Name = "Authorization",
+            In = Microsoft.OpenApi.Models.ParameterLocation.Header,
             Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
             Scheme = "bearer",
             BearerFormat = "JWT"
@@ -131,6 +158,10 @@ try
 
     // 8. Migrations au démarrage (SAUF wolverine — géré automatiquement)
     await app.ApplyMigrationsAsync();
+
+    // 9. Seed data (Development uniquement — idempotent)
+    if (app.Environment.IsDevelopment())
+        await SeedDataExtensions.SeedDevelopmentDataAsync(app.Services);
 
     // 9. Middleware pipeline
     app.UseSerilogRequestLogging();
