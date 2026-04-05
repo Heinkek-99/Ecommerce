@@ -38,8 +38,8 @@ public class OutboxIntegrationTests
         var addressId = Guid.NewGuid();
         var lines = new List<OrderItemLine>
         {
-            new(Guid.NewGuid(), "Laptop Pro", "LAP-001", 1, 999.99m),
-            new(Guid.NewGuid(), "Mouse", "MSE-002", 2, 29.99m)
+            new(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "Laptop Pro", "LAP-001", 1, 999.99m),
+            new(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "Mouse", "MSE-002", 2, 29.99m)
         };
 
         // Act

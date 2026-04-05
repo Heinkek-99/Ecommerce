@@ -13,7 +13,7 @@ public class PlaceOrderHandlerTests
 
     private static List<OrderItemLine> ValidLines() =>
     [
-        new OrderItemLine(Guid.NewGuid(), "Widget Pro", "WGT-001", 2, 49.99m)
+        new OrderItemLine(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "Widget Pro", "WGT-001", 2, 49.99m)
     ];
 
     [Fact]
@@ -38,15 +38,15 @@ public class PlaceOrderHandlerTests
         var addressId = Guid.NewGuid();
         var lines = new List<OrderItemLine>
         {
-            new(Guid.NewGuid(), "Product A", "SKU-A", 3, 10m),
-            new(Guid.NewGuid(), "Product B", "SKU-B", 1, 25m)
+            new(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "Product A", "SKU-A", 3, 10m),
+            new(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "Product B", "SKU-B", 1, 25m)
         };
 
         var order = Order.Create(userId, addressId, "EUR", lines);
 
         order.TotalAmount.Should().Be(55m);
         order.Items.Should().HaveCount(2);
-        order.Status.Should().Be("pending"); // PlaceOrderHandler appelle Confirm() mais Order.Create() seul = pending
+        order.Status.Should().Be("pending");
     }
 
     [Fact]
@@ -54,7 +54,7 @@ public class PlaceOrderHandlerTests
     {
         var order = Order.Create(
             Guid.NewGuid(), Guid.NewGuid(), "EUR",
-            [new(Guid.NewGuid(), "P", "SKU", 1, 10m)]);
+            [new(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "P", "SKU", 1, 10m)]);
 
         order.Cancel();
 
@@ -66,11 +66,11 @@ public class PlaceOrderHandlerTests
     {
         var order = Order.Create(
             Guid.NewGuid(), Guid.NewGuid(), "EUR",
-            [new(Guid.NewGuid(), "P", "SKU", 1, 10m)]);
+            [new(Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), "P", "SKU", 1, 10m)]);
         order.Confirm();
-        order.Ship(); // confirm → ship
+        order.Ship();
 
-        order.Cancel(); // shipped → cancelled allowed by domain
+        order.Cancel();
         order.Status.Should().Be("cancelled");
     }
 
@@ -78,7 +78,7 @@ public class PlaceOrderHandlerTests
     public void OrderItem_Snapshot_StoresProductData()
     {
         var item = OrderItem.Create(
-            Guid.NewGuid(), Guid.NewGuid(),
+            Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(), Guid.NewGuid(),
             productName: "Widget", productSku: "WGT-001",
             quantity: 2, unitPrice: 19.99m);
 

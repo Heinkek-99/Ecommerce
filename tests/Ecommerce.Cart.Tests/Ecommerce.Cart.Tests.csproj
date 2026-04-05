@@ -24,11 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Modules\Orders\Ecommerce.Orders.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Cart\Ecommerce.Cart.csproj" />
     <ProjectReference Include="..\..\src\Shared\Ecommerce.Shared.csproj" />
   </ItemGroup>
 
