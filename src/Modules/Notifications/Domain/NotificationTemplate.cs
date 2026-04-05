@@ -11,4 +11,23 @@ public class NotificationTemplate
     public bool IsActive { get; private set; }
 
     private NotificationTemplate() { }
+
+    public static NotificationTemplate Create(
+        string eventType,
+        string channel,
+        string bodyTemplate,
+        string? subject = null,
+        string lang = "fr")
+    {
+        return new NotificationTemplate
+        {
+            Id = Guid.NewGuid(),
+            EventType = eventType,
+            Channel = channel,
+            Lang = lang,
+            Subject = subject,
+            BodyTemplate = bodyTemplate,
+            IsActive = true
+        };
+    }
 }

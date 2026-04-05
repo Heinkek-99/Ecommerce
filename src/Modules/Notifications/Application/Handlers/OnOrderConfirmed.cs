@@ -1,29 +1,26 @@
-using Ecommerce.Notifications.Domain;
-using Ecommerce.Notifications.Infrastructure;
+using Ecommerce.Notifications.Application.Commands.SendNotification;
 using Ecommerce.Shared.Events;
+using Wolverine;
 
 namespace Ecommerce.Notifications.Application.Handlers;
 
 public class OnOrderConfirmedNotify
 {
-    private readonly NotificationsDbContext _db;
-
-    public OnOrderConfirmedNotify(NotificationsDbContext db)
+    public async Task Handle(OrderConfirmedEvent evt, IMessageBus bus, CancellationToken ct)
     {
-        _db = db;
-    }
-
-    public async Task Handle(OrderConfirmedEvent evt, CancellationToken ct)
-    {
-        var payload = $"{{\"order_id\": \"{evt.OrderId}\", \"total\": \"{evt.TotalAmount} {evt.CurrencyCode}\"}}";
-
-        var notification = Notification.Create(
-            evt.UserId,
-            channel: "email",
-            payload: payload,
-            orderId: evt.OrderId);
-
-        _db.Notifications.Add(notification);
-        await _db.SaveChangesAsync(ct);
+        await bus.InvokeAsync<Ecommerce.Shared.Common.Result>(
+            new SendNotificationCommand(
+                UserId: evt.UserId,
+                Channel: "email",
+                TemplateCode: "order_confirmed",
+                Variables: new Dictionary<string, string>
+                {
+                    ["order_id"] = evt.OrderId.ToString(),
+                    ["total"]    = evt.TotalAmount.ToString("F2"),
+                    ["currency"] = evt.CurrencyCode,
+                    ["user_name"] = "Client"
+                },
+                OrderId: evt.OrderId),
+            ct);
     }
 }
