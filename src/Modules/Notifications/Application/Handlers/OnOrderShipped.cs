@@ -1,29 +1,24 @@
-using Ecommerce.Notifications.Domain;
-using Ecommerce.Notifications.Infrastructure;
+using Ecommerce.Notifications.Application.Commands.SendNotification;
 using Ecommerce.Shared.Events;
+using Wolverine;
 
 namespace Ecommerce.Notifications.Application.Handlers;
 
 public class OnOrderShippedNotify
 {
-    private readonly NotificationsDbContext _db;
-
-    public OnOrderShippedNotify(NotificationsDbContext db)
+    public async Task Handle(OrderShippedEvent evt, IMessageBus bus, CancellationToken ct)
     {
-        _db = db;
-    }
-
-    public async Task Handle(OrderShippedEvent evt, CancellationToken ct)
-    {
-        var payload = $"{{\"order_id\": \"{evt.OrderId}\", \"tracking\": \"{evt.TrackingNumber}\"}}";
-
-        var notification = Notification.Create(
-            evt.UserId,
-            channel: "email",
-            payload: payload,
-            orderId: evt.OrderId);
-
-        _db.Notifications.Add(notification);
-        await _db.SaveChangesAsync(ct);
+        await bus.InvokeAsync<Ecommerce.Shared.Common.Result>(
+            new SendNotificationCommand(
+                UserId: evt.UserId,
+                Channel: "email",
+                TemplateCode: "order_shipped",
+                Variables: new Dictionary<string, string>
+                {
+                    ["order_id"]        = evt.OrderId.ToString(),
+                    ["tracking_number"] = evt.TrackingNumber
+                },
+                OrderId: evt.OrderId),
+            ct);
     }
 }
