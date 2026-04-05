@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="8b35f377-da7f-46af-81c8-b1a134c3e905" name="@DESKTOP-0SCUMSC 2026-04-03 05:00:49" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-04-03T05:00:49.5441419+02:00" queuing="2026-04-03T05:00:49.5441421+02:00" start="2026-04-03T05:00:12.6926273+02:00" finish="2026-04-03T05:00:49.6567122+02:00" />
+  <TestSettings name="default" id="08509882-dad6-4cf1-bb11-bf645186eb62">
+    <Deployment runDeploymentRoot="_DESKTOP-0SCUMSC_2026-04-03_05_00_49" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="ce1b0812-4fb0-4eb0-9f0e-2e92c8402a57" testId="cb4612e7-d2c4-76d0-4f02-9c4c9c660a85" testName="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests.LoyaltyAccount_AddPoints_IncreasesBalanceAndLifetime" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0008778" startTime="2026-04-03T05:00:48.2790441+02:00" endTime="2026-04-03T05:00:48.2790442+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce1b0812-4fb0-4eb0-9f0e-2e92c8402a57" />
+    <UnitTestResult executionId="d45f4c50-920f-4f8c-b17e-4dddf934aa67" testId="c165ad30-15c2-f326-7205-4e5197bda899" testName="Ecommerce.Loyalty.Tests.Application.IdempotencyTests.DifferentOrderIds_BothProcessed_TwoTransactionsCreated" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0009983" startTime="2026-04-03T05:00:48.2779758+02:00" endTime="2026-04-03T05:00:48.2779760+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d45f4c50-920f-4f8c-b17e-4dddf934aa67" />
+    <UnitTestResult executionId="f088f9e8-731b-406a-95e9-29e9da62910a" testId="4b7d38ac-2854-bfc1-538c-ccb29f4c94a6" testName="Ecommerce.Loyalty.Tests.UnitTest1.Test1" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0823123" startTime="2026-04-03T05:00:48.1032356+02:00" endTime="2026-04-03T05:00:48.1033525+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f088f9e8-731b-406a-95e9-29e9da62910a" />
+    <UnitTestResult executionId="20646452-3ad6-44d4-b27e-cf715d1e76ec" testId="94734510-fd24-da5f-93d4-a17421fd021b" testName="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests.LoyaltyAccount_AddPoints_CreatesEarnTransaction" computerName="DESKTOP-0SCUMSC" duration="00:00:00.2268074" startTime="2026-04-03T05:00:48.2784245+02:00" endTime="2026-04-03T05:00:48.2784246+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20646452-3ad6-44d4-b27e-cf715d1e76ec" />
+    <UnitTestResult executionId="908f281c-7f9d-4445-8586-3cd3b6856648" testId="f7d6fb3f-5d24-f854-62f4-9033f5dd2965" testName="Ecommerce.Loyalty.Tests.Application.IdempotencyTests.OrderId_AlreadyProcessed_ShouldNotAddDuplicateTransaction" computerName="DESKTOP-0SCUMSC" duration="00:00:00.1997576" startTime="2026-04-03T05:00:48.2761733+02:00" endTime="2026-04-03T05:00:48.2761735+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="908f281c-7f9d-4445-8586-3cd3b6856648" />
+    <UnitTestResult executionId="014ce904-ad64-4aaf-b519-60b85cd55dd7" testId="9ada8e83-b44c-2db8-e3de-caa7d6f8a028" testName="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests.LoyaltyProgram_PointsCalculation_AppliesMultiplier" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0041687" startTime="2026-04-03T05:00:48.2793714+02:00" endTime="2026-04-03T05:00:48.2793715+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="014ce904-ad64-4aaf-b519-60b85cd55dd7" />
+    <UnitTestResult executionId="fdd97c40-0349-49bb-97f4-1548234ae77f" testId="203242b6-40ae-5407-9852-e4b3e4152e22" testName="Ecommerce.Loyalty.Tests.Application.IdempotencyTests.SameOrderId_ProcessedTwice_BalanceUnchangedSecondTime" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0018786" startTime="2026-04-03T05:00:48.2782768+02:00" endTime="2026-04-03T05:00:48.2782769+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdd97c40-0349-49bb-97f4-1548234ae77f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Ecommerce.Loyalty.Tests.Application.IdempotencyTests.SameOrderId_ProcessedTwice_BalanceUnchangedSecondTime" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="203242b6-40ae-5407-9852-e4b3e4152e22">
+      <Execution id="fdd97c40-0349-49bb-97f4-1548234ae77f" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.Application.IdempotencyTests" name="SameOrderId_ProcessedTwice_BalanceUnchangedSecondTime" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Loyalty.Tests.Application.IdempotencyTests.DifferentOrderIds_BothProcessed_TwoTransactionsCreated" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="c165ad30-15c2-f326-7205-4e5197bda899">
+      <Execution id="d45f4c50-920f-4f8c-b17e-4dddf934aa67" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.Application.IdempotencyTests" name="DifferentOrderIds_BothProcessed_TwoTransactionsCreated" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests.LoyaltyAccount_AddPoints_IncreasesBalanceAndLifetime" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="cb4612e7-d2c4-76d0-4f02-9c4c9c660a85">
+      <Execution id="ce1b0812-4fb0-4eb0-9f0e-2e92c8402a57" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests" name="LoyaltyAccount_AddPoints_IncreasesBalanceAndLifetime" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Loyalty.Tests.UnitTest1.Test1" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="4b7d38ac-2854-bfc1-538c-ccb29f4c94a6">
+      <Execution id="f088f9e8-731b-406a-95e9-29e9da62910a" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.UnitTest1" name="Test1" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests.LoyaltyProgram_PointsCalculation_AppliesMultiplier" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="9ada8e83-b44c-2db8-e3de-caa7d6f8a028">
+      <Execution id="014ce904-ad64-4aaf-b519-60b85cd55dd7" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests" name="LoyaltyProgram_PointsCalculation_AppliesMultiplier" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests.LoyaltyAccount_AddPoints_CreatesEarnTransaction" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="94734510-fd24-da5f-93d4-a17421fd021b">
+      <Execution id="20646452-3ad6-44d4-b27e-cf715d1e76ec" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.Application.OnOrderConfirmedTests" name="LoyaltyAccount_AddPoints_CreatesEarnTransaction" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Loyalty.Tests.Application.IdempotencyTests.OrderId_AlreadyProcessed_ShouldNotAddDuplicateTransaction" storage="/home/kengn/projects/ecommerce/tests/ecommerce.loyalty.tests/bin/release/net8.0/ecommerce.loyalty.tests.dll" id="f7d6fb3f-5d24-f854-62f4-9033f5dd2965">
+      <Execution id="908f281c-7f9d-4445-8586-3cd3b6856648" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Loyalty.Tests/bin/Release/net8.0/Ecommerce.Loyalty.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Loyalty.Tests.Application.IdempotencyTests" name="OrderId_AlreadyProcessed_ShouldNotAddDuplicateTransaction" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="cb4612e7-d2c4-76d0-4f02-9c4c9c660a85" executionId="ce1b0812-4fb0-4eb0-9f0e-2e92c8402a57" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c165ad30-15c2-f326-7205-4e5197bda899" executionId="d45f4c50-920f-4f8c-b17e-4dddf934aa67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b7d38ac-2854-bfc1-538c-ccb29f4c94a6" executionId="f088f9e8-731b-406a-95e9-29e9da62910a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94734510-fd24-da5f-93d4-a17421fd021b" executionId="20646452-3ad6-44d4-b27e-cf715d1e76ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7d6fb3f-5d24-f854-62f4-9033f5dd2965" executionId="908f281c-7f9d-4445-8586-3cd3b6856648" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ada8e83-b44c-2db8-e3de-caa7d6f8a028" executionId="014ce904-ad64-4aaf-b519-60b85cd55dd7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="203242b6-40ae-5407-9852-e4b3e4152e22" executionId="fdd97c40-0349-49bb-97f4-1548234ae77f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.26] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.25)
+[xUnit.net 00:00:25.31]   Discovering: Ecommerce.Loyalty.Tests
+[xUnit.net 00:00:25.66]   Discovered:  Ecommerce.Loyalty.Tests
+[xUnit.net 00:00:25.68]   Starting:    Ecommerce.Loyalty.Tests
+[xUnit.net 00:00:27.20]   Finished:    Ecommerce.Loyalty.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

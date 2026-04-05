@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="c3b7226d-ad48-469e-9a32-52440424384c" name="@DESKTOP-0SCUMSC 2026-04-03 05:00:51" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-04-03T05:00:51.0477419+02:00" queuing="2026-04-03T05:00:51.0477421+02:00" start="2026-04-03T05:00:13.1214664+02:00" finish="2026-04-03T05:00:51.1028208+02:00" />
+  <TestSettings name="default" id="aad58f1f-ed16-43a2-8098-64d3ec60206e">
+    <Deployment runDeploymentRoot="_DESKTOP-0SCUMSC_2026-04-03_05_00_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="30315dd7-8618-4d9e-b73d-ad4f266ca6fd" testId="24f0cd38-37f1-ebba-e191-6cbe6ddabbef" testName="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Order_Create_CalculatesTotalCorrectly" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0012085" startTime="2026-04-03T05:00:50.5435103+02:00" endTime="2026-04-03T05:00:50.5435104+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="30315dd7-8618-4d9e-b73d-ad4f266ca6fd" />
+    <UnitTestResult executionId="33f70eca-215a-42d2-9282-bbea1007b897" testId="3cb164a0-4fb7-a7b2-b318-b4ce6212239c" testName="Ecommerce.Orders.Tests.Application.OutboxIntegrationTests.OrderConfirmedEvent_HasCorrectData" computerName="DESKTOP-0SCUMSC" duration="00:00:00.2460651" startTime="2026-04-03T05:00:49.8091548+02:00" endTime="2026-04-03T05:00:49.8091549+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33f70eca-215a-42d2-9282-bbea1007b897" />
+    <UnitTestResult executionId="71ccc752-0240-477c-8d7a-7ef1f70de722" testId="7c552f9d-7124-f4a8-cda9-89bb113d6e2d" testName="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.OrderItem_Snapshot_StoresProductData" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0079452" startTime="2026-04-03T05:00:50.5523291+02:00" endTime="2026-04-03T05:00:50.5523293+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71ccc752-0240-477c-8d7a-7ef1f70de722" />
+    <UnitTestResult executionId="e81925b2-dd75-4f80-aca9-09d8152eb306" testId="6745beeb-8f96-4855-3d4f-cdaeef0eb025" testName="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Handle_ValidCommand_ReturnsSuccessWithOrderId" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0197771" startTime="2026-04-03T05:00:50.5259110+02:00" endTime="2026-04-03T05:00:50.5259112+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e81925b2-dd75-4f80-aca9-09d8152eb306" />
+    <UnitTestResult executionId="061992eb-20e0-4ba1-b300-978840058f75" testId="710231f3-2948-154a-de10-0f3aeccee8e4" testName="Ecommerce.Orders.Tests.UnitTest1.Test1" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0440891" startTime="2026-04-03T05:00:49.6861639+02:00" endTime="2026-04-03T05:00:49.6862366+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="061992eb-20e0-4ba1-b300-978840058f75" />
+    <UnitTestResult executionId="c1cbf6ce-ad8e-4c6d-b856-0926754fd09f" testId="316213c9-86eb-884b-4416-dc9de9bb0fe7" testName="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Order_Cancel_AfterConfirm_SetsStatusCancelled" computerName="DESKTOP-0SCUMSC" duration="00:00:01.0519019" startTime="2026-04-03T05:00:50.5042685+02:00" endTime="2026-04-03T05:00:50.5042686+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1cbf6ce-ad8e-4c6d-b856-0926754fd09f" />
+    <UnitTestResult executionId="23702592-d2b6-4928-8e6a-0e87e453c910" testId="0d42d9b8-5cf9-2b53-7d26-b1f8fae856e3" testName="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Order_Cancel_WhenConfirmed_SetsStatusCancelled" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0139148" startTime="2026-04-03T05:00:50.5408638+02:00" endTime="2026-04-03T05:00:50.5408639+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23702592-d2b6-4928-8e6a-0e87e453c910" />
+    <UnitTestResult executionId="710e09b8-9886-4981-997d-143f66e25bc6" testId="1b6ae3a6-2bcb-8e57-22d9-4ba50614b667" testName="Ecommerce.Orders.Tests.Application.OutboxIntegrationTests.PlaceOrder_Creates_Order_With_CorrectItems_For_Outbox" computerName="DESKTOP-0SCUMSC" duration="00:00:00.1936636" startTime="2026-04-03T05:00:49.9556547+02:00" endTime="2026-04-03T05:00:49.9556551+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="710e09b8-9886-4981-997d-143f66e25bc6" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.OutboxIntegrationTests.OrderConfirmedEvent_HasCorrectData" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="3cb164a0-4fb7-a7b2-b318-b4ce6212239c">
+      <Execution id="33f70eca-215a-42d2-9282-bbea1007b897" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.OutboxIntegrationTests" name="OrderConfirmedEvent_HasCorrectData" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Order_Create_CalculatesTotalCorrectly" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="24f0cd38-37f1-ebba-e191-6cbe6ddabbef">
+      <Execution id="30315dd7-8618-4d9e-b73d-ad4f266ca6fd" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests" name="Order_Create_CalculatesTotalCorrectly" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Handle_ValidCommand_ReturnsSuccessWithOrderId" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="6745beeb-8f96-4855-3d4f-cdaeef0eb025">
+      <Execution id="e81925b2-dd75-4f80-aca9-09d8152eb306" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests" name="Handle_ValidCommand_ReturnsSuccessWithOrderId" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.UnitTest1.Test1" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="710231f3-2948-154a-de10-0f3aeccee8e4">
+      <Execution id="061992eb-20e0-4ba1-b300-978840058f75" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.UnitTest1" name="Test1" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Order_Cancel_WhenConfirmed_SetsStatusCancelled" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="0d42d9b8-5cf9-2b53-7d26-b1f8fae856e3">
+      <Execution id="23702592-d2b6-4928-8e6a-0e87e453c910" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests" name="Order_Cancel_WhenConfirmed_SetsStatusCancelled" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.OrderItem_Snapshot_StoresProductData" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="7c552f9d-7124-f4a8-cda9-89bb113d6e2d">
+      <Execution id="71ccc752-0240-477c-8d7a-7ef1f70de722" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests" name="OrderItem_Snapshot_StoresProductData" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.OutboxIntegrationTests.PlaceOrder_Creates_Order_With_CorrectItems_For_Outbox" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="1b6ae3a6-2bcb-8e57-22d9-4ba50614b667">
+      <Execution id="710e09b8-9886-4981-997d-143f66e25bc6" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.OutboxIntegrationTests" name="PlaceOrder_Creates_Order_With_CorrectItems_For_Outbox" />
+    </UnitTest>
+    <UnitTest name="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests.Order_Cancel_AfterConfirm_SetsStatusCancelled" storage="/home/kengn/projects/ecommerce/tests/ecommerce.orders.tests/bin/release/net8.0/ecommerce.orders.tests.dll" id="316213c9-86eb-884b-4416-dc9de9bb0fe7">
+      <Execution id="c1cbf6ce-ad8e-4c6d-b856-0926754fd09f" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Orders.Tests/bin/Release/net8.0/Ecommerce.Orders.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Orders.Tests.Application.PlaceOrderHandlerTests" name="Order_Cancel_AfterConfirm_SetsStatusCancelled" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="24f0cd38-37f1-ebba-e191-6cbe6ddabbef" executionId="30315dd7-8618-4d9e-b73d-ad4f266ca6fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3cb164a0-4fb7-a7b2-b318-b4ce6212239c" executionId="33f70eca-215a-42d2-9282-bbea1007b897" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c552f9d-7124-f4a8-cda9-89bb113d6e2d" executionId="71ccc752-0240-477c-8d7a-7ef1f70de722" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6745beeb-8f96-4855-3d4f-cdaeef0eb025" executionId="e81925b2-dd75-4f80-aca9-09d8152eb306" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="710231f3-2948-154a-de10-0f3aeccee8e4" executionId="061992eb-20e0-4ba1-b300-978840058f75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="316213c9-86eb-884b-4416-dc9de9bb0fe7" executionId="c1cbf6ce-ad8e-4c6d-b856-0926754fd09f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0d42d9b8-5cf9-2b53-7d26-b1f8fae856e3" executionId="23702592-d2b6-4928-8e6a-0e87e453c910" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b6ae3a6-2bcb-8e57-22d9-4ba50614b667" executionId="710e09b8-9886-4981-997d-143f66e25bc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="8" executed="8" passed="8" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.02] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.25)
+[xUnit.net 00:00:23.80]   Discovering: Ecommerce.Orders.Tests
+[xUnit.net 00:00:24.18]   Discovered:  Ecommerce.Orders.Tests
+[xUnit.net 00:00:24.20]   Starting:    Ecommerce.Orders.Tests
+[xUnit.net 00:00:25.86]   Finished:    Ecommerce.Orders.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
