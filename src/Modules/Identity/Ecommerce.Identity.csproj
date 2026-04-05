@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Ecommerce.Shared.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Ecommerce.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +16,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
     <PackageReference Include="WolverineFx" Version="3.7.0" />
+    <PackageReference Include="WolverineFx.EntityFrameworkCore" Version="3.7.0" />
   </ItemGroup>
 
   <PropertyGroup>
