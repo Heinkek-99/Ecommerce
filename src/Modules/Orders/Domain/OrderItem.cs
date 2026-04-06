@@ -8,10 +8,13 @@ public class OrderItem
 
     // Snapshot — données figées au moment de la commande
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Guid ProductId { get; private set; }
     public Guid SellerId { get; private set; }
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
     public string ProductName { get; private set; } = default!;
     public string ProductSku { get; private set; } = default!;
     public int Quantity { get; private set; }
@@ -23,10 +26,13 @@ public class OrderItem
         Guid orderId,
         Guid variantId,
 <<<<<<< HEAD
+<<<<<<< HEAD
         Guid productId,
         Guid sellerId,
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
         string productName,
         string productSku,
         int quantity,
@@ -43,10 +49,13 @@ public class OrderItem
             OrderId = orderId,
             VariantId = variantId,
 <<<<<<< HEAD
+<<<<<<< HEAD
             ProductId = productId,
             SellerId = sellerId,
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
             ProductName = productName,
             ProductSku = productSku,
             Quantity = quantity,

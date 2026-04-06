@@ -19,10 +19,14 @@ namespace Ecommerce.Orders.Infrastructure.Migrations
             modelBuilder
                 .HasDefaultSchema("orders")
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "8.0.11")
 =======
                 .HasAnnotation("ProductVersion", "8.0.0")
 >>>>>>> feature/orders-logic
+=======
+                .HasAnnotation("ProductVersion", "8.0.0")
+>>>>>>> feature/notifications-logic
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -105,12 +109,15 @@ namespace Ecommerce.Orders.Infrastructure.Migrations
                         .HasColumnName("order_id");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uuid")
                         .HasColumnName("product_id");
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("text")
@@ -126,12 +133,15 @@ namespace Ecommerce.Orders.Infrastructure.Migrations
                         .HasColumnName("quantity");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.Property<Guid>("SellerId")
                         .HasColumnType("uuid")
                         .HasColumnName("seller_id");
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                     b.Property<decimal>("UnitPrice")
                         .HasColumnType("numeric(12,2)")
                         .HasColumnName("unit_price");

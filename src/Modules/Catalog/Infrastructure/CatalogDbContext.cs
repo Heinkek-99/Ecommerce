@@ -12,9 +12,12 @@ public class CatalogDbContext : DbContext
     public DbSet<ProductVariant> ProductVariants => Set<ProductVariant>();
     public DbSet<Category> Categories => Set<Category>();
 <<<<<<< HEAD
+<<<<<<< HEAD
     public DbSet<Seller> Sellers => Set<Seller>();
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -26,6 +29,7 @@ public class CatalogDbContext : DbContext
             e.HasKey(p => p.Id);
             e.Property(p => p.Id).HasColumnName("id");
             e.Property(p => p.SellerId).HasColumnName("seller_id").IsRequired();
+<<<<<<< HEAD
 <<<<<<< HEAD
             e.Property(p => p.SellerName).HasColumnName("seller_name").IsRequired().HasMaxLength(500);
             e.Property(p => p.CategoryId).HasColumnName("category_id");
@@ -40,6 +44,8 @@ public class CatalogDbContext : DbContext
             e.Property(p => p.UpdatedAt).HasColumnName("updated_at").HasDefaultValueSql("NOW()");
             e.HasIndex(p => p.Slug).IsUnique();
 =======
+=======
+>>>>>>> feature/notifications-logic
             e.Property(p => p.CategoryId).HasColumnName("category_id");
             e.Property(p => p.Name).HasColumnName("name").IsRequired().HasMaxLength(500);
             e.Property(p => p.Description).HasColumnName("description");
@@ -51,7 +57,10 @@ public class CatalogDbContext : DbContext
             e.Property(p => p.UpdatedAt).HasColumnName("updated_at")
                 .HasDefaultValueSql("NOW()");
 
+<<<<<<< HEAD
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
             e.Ignore(p => p.Variants);
         });
 
@@ -79,6 +88,7 @@ public class CatalogDbContext : DbContext
             e.Property(c => c.Slug).HasColumnName("slug").IsRequired();
             e.HasIndex(c => c.Slug).IsUnique();
 <<<<<<< HEAD
+<<<<<<< HEAD
             e.HasMany(c => c.Children)
              .WithOne()
              .HasForeignKey(c => c.ParentId)
@@ -103,6 +113,8 @@ public class CatalogDbContext : DbContext
             e.HasIndex(s => s.StripeAccountId).IsUnique().HasFilter("stripe_account_id IS NOT NULL");
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
         });
     }
 }

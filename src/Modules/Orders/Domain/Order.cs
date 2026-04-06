@@ -42,10 +42,13 @@ public class Order
                 order.Id,
                 line.VariantId,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 line.ProductId,
                 line.SellerId,
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                 line.ProductName,
                 line.ProductSku,
                 line.Quantity,
@@ -81,6 +84,7 @@ public class Order
         UpdatedAt = DateTime.UtcNow;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public void SetPendingPayment()
     {
@@ -105,15 +109,20 @@ public class Order
     }
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 }
 
 public record OrderItemLine(
     Guid VariantId,
 <<<<<<< HEAD
+<<<<<<< HEAD
     Guid ProductId,
     Guid SellerId,
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
     string ProductName,
     string ProductSku,
     int Quantity,

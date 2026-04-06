@@ -1,10 +1,13 @@
 using Ecommerce.Catalog.Application.Commands.CreateProduct;
 using Ecommerce.Catalog.Application.Queries.GetProduct;
 <<<<<<< HEAD
+<<<<<<< HEAD
 using Ecommerce.Catalog.Application.Queries.GetProductBySlug;
 using Ecommerce.Catalog.Application.Queries.ListProducts;
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 using Ecommerce.Shared.Common;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,13 +18,18 @@ namespace Ecommerce.Catalog.Api;
 [ApiController]
 [Route("api/catalog/products")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 [Authorize]
 >>>>>>> feature/orders-logic
+=======
+[Authorize]
+>>>>>>> feature/notifications-logic
 public class ProductsController : ControllerBase
 {
     private readonly IMessageBus _bus;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public ProductsController(IMessageBus bus) => _bus = bus;
 
@@ -58,20 +66,28 @@ public class ProductsController : ControllerBase
     [HttpPost]
     [Authorize]
 =======
+=======
+>>>>>>> feature/notifications-logic
     public ProductsController(IMessageBus bus)
     {
         _bus = bus;
     }
 
     [HttpPost]
+<<<<<<< HEAD
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
     public async Task<IActionResult> Create([FromBody] CreateProductCommand cmd)
     {
         var result = await _bus.InvokeAsync<Result<Guid>>(cmd);
         return result.IsSuccess ? Ok(result.Value) : BadRequest(result.Error);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> feature/notifications-logic
 
     [HttpGet("{id:guid}")]
     public async Task<IActionResult> Get(Guid id)
@@ -79,5 +95,8 @@ public class ProductsController : ControllerBase
         var result = await _bus.InvokeAsync<Result<ProductDto>>(new GetProductQuery(id));
         return result.IsSuccess ? Ok(result.Value) : NotFound(result.Error);
     }
+<<<<<<< HEAD
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 }

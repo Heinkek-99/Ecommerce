@@ -32,6 +32,7 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     [AllowAnonymous]
 <<<<<<< HEAD
+<<<<<<< HEAD
     public async Task<IActionResult> Register([FromBody] RegisterRequest req)
     {
         // Rôle toujours forcé à "buyer" — le champ role du body est ignoré
@@ -40,6 +41,10 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Register([FromBody] RegisterUserCommand cmd)
     {
 >>>>>>> feature/orders-logic
+=======
+    public async Task<IActionResult> Register([FromBody] RegisterUserCommand cmd)
+    {
+>>>>>>> feature/notifications-logic
         var result = await _bus.InvokeAsync<Result<Guid>>(cmd);
         return result.IsSuccess ? Ok(new { userId = result.Value }) : BadRequest(result.Error);
     }
@@ -58,6 +63,7 @@ public class AuthController : ControllerBase
         var result = hasher.VerifyHashedPassword(null!, user.PasswordHash, req.Password);
         if (result == PasswordVerificationResult.Failed) return Unauthorized("Invalid credentials.");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         var jwtKey = _config["JwtSettings:SecretKey"] ?? _config["JWT_SECRET"];
         if (string.IsNullOrEmpty(jwtKey) || jwtKey.Length < 32)
@@ -93,6 +99,8 @@ public class AuthController : ControllerBase
 
 public record RegisterRequest(string Email, string Password, string FullName, string? Phone = null);
 =======
+=======
+>>>>>>> feature/notifications-logic
         var jwtKey = _config["Jwt:Key"] ?? "ecommerce-super-secret-key-32chars!!";
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -110,5 +118,8 @@ public record RegisterRequest(string Email, string Password, string FullName, st
     }
 }
 
+<<<<<<< HEAD
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 public record LoginRequest(string Email, string Password);

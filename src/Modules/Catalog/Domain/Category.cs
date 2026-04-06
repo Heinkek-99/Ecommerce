@@ -8,11 +8,14 @@ public class Category
     public string Slug { get; private set; } = default!;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private readonly List<Category> _children = new();
     public IReadOnlyList<Category> Children => _children.AsReadOnly();
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
     private Category() { }
 
     public static Category Create(string name, string slug, Guid? parentId = null)

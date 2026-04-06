@@ -7,6 +7,7 @@ public record CreateProductCommand(
     Guid SellerId,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     string SellerName,
     Guid? CategoryId,
     string Name,
@@ -17,12 +18,17 @@ public record CreateProductCommand(
 =======
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
     Guid? CategoryId,
     string Name,
     string? Description,
     decimal BasePrice
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> feature/identity-auth
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 ) : ICommand<Result<Guid>>;

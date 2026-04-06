@@ -19,10 +19,14 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
             modelBuilder
                 .HasDefaultSchema("catalog")
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "8.0.11")
 =======
                 .HasAnnotation("ProductVersion", "8.0.0")
 >>>>>>> feature/orders-logic
+=======
+                .HasAnnotation("ProductVersion", "8.0.0")
+>>>>>>> feature/notifications-logic
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -52,11 +56,14 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
                         .HasName("pk_categories");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.HasIndex("ParentId")
                         .HasDatabaseName("ix_categories_parent_id");
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                     b.HasIndex("Slug")
                         .IsUnique()
                         .HasDatabaseName("ix_categories_slug");
@@ -96,12 +103,15 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
                         .HasColumnName("is_active");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.Property<string>("MainImageUrl")
                         .HasColumnType("text")
                         .HasColumnName("main_image_url");
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -112,6 +122,7 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("seller_id");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     b.Property<string>("SellerName")
                         .IsRequired()
@@ -127,6 +138,8 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                     b.Property<DateTime>("UpdatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone")
@@ -137,12 +150,15 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
                         .HasName("pk_products");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     b.HasIndex("Slug")
                         .IsUnique()
                         .HasDatabaseName("ix_products_slug");
 
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
                     b.ToTable("products", "catalog");
                 });
 
@@ -189,6 +205,7 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
 
                     b.ToTable("product_variants", "catalog");
                 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             modelBuilder.Entity("Ecommerce.Catalog.Domain.Seller", b =>
@@ -276,6 +293,8 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
                 });
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
 #pragma warning restore 612, 618
         }
     }

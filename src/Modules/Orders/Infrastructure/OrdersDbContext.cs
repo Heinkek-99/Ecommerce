@@ -53,10 +53,13 @@ public class OrdersDbContext : DbContext
             e.Property(i => i.OrderId).HasColumnName("order_id").IsRequired();
             e.Property(i => i.VariantId).HasColumnName("variant_id").IsRequired();
 <<<<<<< HEAD
+<<<<<<< HEAD
             e.Property(i => i.ProductId).HasColumnName("product_id");
             e.Property(i => i.SellerId).HasColumnName("seller_id");
 =======
 >>>>>>> feature/orders-logic
+=======
+>>>>>>> feature/notifications-logic
             e.Property(i => i.ProductName).HasColumnName("product_name").IsRequired();
             e.Property(i => i.ProductSku).HasColumnName("product_sku").IsRequired();
             e.Property(i => i.Quantity).HasColumnName("quantity").IsRequired();
