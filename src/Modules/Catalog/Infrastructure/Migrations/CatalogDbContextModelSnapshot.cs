@@ -15,7 +15,7 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
-#pragma warning disable 612, 618
+// #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("catalog")
                 .HasAnnotation("ProductVersion", "8.0.11")
@@ -257,7 +257,7 @@ namespace Ecommerce.Catalog.Infrastructure.Migrations
                 {
                     b.Navigation("Children");
                 });
-#pragma warning restore 612, 618
+// #pragma warning restore 612, 618
         }
     }
 }

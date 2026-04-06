@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="cad160a2-cd08-4a8c-8871-21fc5c0e3ede" name="@DESKTOP-0SCUMSC 2026-04-03 05:10:51" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-04-03T05:10:51.7562068+02:00" queuing="2026-04-03T05:10:51.7562071+02:00" start="2026-04-03T05:10:10.7494259+02:00" finish="2026-04-03T05:10:51.8776077+02:00" />
+  <TestSettings name="default" id="068c630a-02e3-4373-98a7-307ae9872cc6">
+    <Deployment runDeploymentRoot="_DESKTOP-0SCUMSC_2026-04-03_05_10_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="7f0b6dfa-0162-44c2-939c-7bb4e6bde581" testId="8f257d3d-8195-6ee5-7ed3-c707b110944d" testName="Ecommerce.Api.IntegrationTests.UnitTest1.Test1" computerName="DESKTOP-0SCUMSC" duration="00:00:00.0427016" startTime="2026-04-03T05:10:50.4716358+02:00" endTime="2026-04-03T05:10:50.4717469+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f0b6dfa-0162-44c2-939c-7bb4e6bde581" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Ecommerce.Api.IntegrationTests.UnitTest1.Test1" storage="/home/kengn/projects/ecommerce/tests/ecommerce.api.integrationtests/bin/release/net8.0/ecommerce.api.integrationtests.dll" id="8f257d3d-8195-6ee5-7ed3-c707b110944d">
+      <Execution id="7f0b6dfa-0162-44c2-939c-7bb4e6bde581" />
+      <TestMethod codeBase="/home/kengn/projects/Ecommerce/tests/Ecommerce.Api.IntegrationTests/bin/Release/net8.0/Ecommerce.Api.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Ecommerce.Api.IntegrationTests.UnitTest1" name="Test1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="8f257d3d-8195-6ee5-7ed3-c707b110944d" executionId="7f0b6dfa-0162-44c2-939c-7bb4e6bde581" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.36] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.25)
+[xUnit.net 00:00:29.29]   Discovering: Ecommerce.Api.IntegrationTests
+[xUnit.net 00:00:29.68]   Discovered:  Ecommerce.Api.IntegrationTests
+[xUnit.net 00:00:29.71]   Starting:    Ecommerce.Api.IntegrationTests
+[xUnit.net 00:00:30.83]   Finished:    Ecommerce.Api.IntegrationTests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
