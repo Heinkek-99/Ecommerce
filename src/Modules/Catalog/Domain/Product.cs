@@ -4,8 +4,6 @@ public class Product
 {
     public Guid Id { get; private set; }
     public Guid SellerId { get; private set; }
-<<<<<<< HEAD
-<<<<<<< HEAD
     public string SellerName { get; private set; } = default!;   // snapshot
     public Guid? CategoryId { get; private set; }
     public string Name { get; private set; } = default!;
@@ -13,17 +11,6 @@ public class Product
     public string? Description { get; private set; }
     public decimal BasePrice { get; private set; }
     public string? MainImageUrl { get; private set; }
-=======
-=======
->>>>>>> feature/notifications-logic
-    public Guid? CategoryId { get; private set; }
-    public string Name { get; private set; } = default!;
-    public string? Description { get; private set; }
-    public decimal BasePrice { get; private set; }
-<<<<<<< HEAD
->>>>>>> feature/orders-logic
-=======
->>>>>>> feature/notifications-logic
     public bool IsActive { get; private set; }
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
@@ -35,8 +22,6 @@ public class Product
 
     public static Product Create(
         Guid sellerId,
-<<<<<<< HEAD
-<<<<<<< HEAD
         string sellerName,
         Guid? categoryId,
         string name,
@@ -44,17 +29,6 @@ public class Product
         string? description,
         decimal basePrice,
         string? mainImageUrl = null)
-=======
-=======
->>>>>>> feature/notifications-logic
-        Guid? categoryId,
-        string name,
-        string? description,
-        decimal basePrice)
-<<<<<<< HEAD
->>>>>>> feature/orders-logic
-=======
->>>>>>> feature/notifications-logic
     {
         if (basePrice < 0)
             throw new ArgumentException("Base price cannot be negative.", nameof(basePrice));
@@ -63,8 +37,6 @@ public class Product
         {
             Id = Guid.NewGuid(),
             SellerId = sellerId,
-<<<<<<< HEAD
-<<<<<<< HEAD
             SellerName = sellerName,
             CategoryId = categoryId,
             Name = name,
@@ -72,17 +44,6 @@ public class Product
             Description = description,
             BasePrice = basePrice,
             MainImageUrl = mainImageUrl,
-=======
-=======
->>>>>>> feature/notifications-logic
-            CategoryId = categoryId,
-            Name = name,
-            Description = description,
-            BasePrice = basePrice,
-<<<<<<< HEAD
->>>>>>> feature/orders-logic
-=======
->>>>>>> feature/notifications-logic
             IsActive = true,
             CreatedAt = DateTime.UtcNow,
             UpdatedAt = DateTime.UtcNow

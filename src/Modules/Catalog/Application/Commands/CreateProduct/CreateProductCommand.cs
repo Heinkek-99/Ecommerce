@@ -5,9 +5,6 @@ namespace Ecommerce.Catalog.Application.Commands.CreateProduct;
 
 public record CreateProductCommand(
     Guid SellerId,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     string SellerName,
     Guid? CategoryId,
     string Name,
@@ -15,20 +12,4 @@ public record CreateProductCommand(
     string? Description,
     decimal BasePrice,
     string? MainImageUrl = null
-=======
-=======
->>>>>>> feature/orders-logic
-=======
->>>>>>> feature/notifications-logic
-    Guid? CategoryId,
-    string Name,
-    string? Description,
-    decimal BasePrice
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> feature/identity-auth
-=======
->>>>>>> feature/orders-logic
-=======
->>>>>>> feature/notifications-logic
 ) : ICommand<Result<Guid>>;

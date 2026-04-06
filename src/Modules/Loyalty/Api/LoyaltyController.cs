@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 using System.Security.Claims;
 using Ecommerce.Loyalty.Application.Commands.RedeemReward;
 using Ecommerce.Loyalty.Application.Queries.GetLoyaltyDashboard;
 using Ecommerce.Loyalty.Application.Queries.GetLoyaltyTransactions;
 using Ecommerce.Shared.Common;
-=======
->>>>>>> feature/notifications-logic
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Wolverine;
@@ -19,7 +16,6 @@ public class LoyaltyController : ControllerBase
 {
     private readonly IMessageBus _bus;
 
-<<<<<<< HEAD
     public LoyaltyController(IMessageBus bus) => _bus = bus;
 
     private Guid GetUserId()
@@ -57,13 +53,4 @@ public class LoyaltyController : ControllerBase
             new GetLoyaltyTransactionsQuery(GetUserId(), page, pageSize), ct);
         return result.IsSuccess ? Ok(result.Value) : NotFound(result.Error);
     }
-=======
-    public LoyaltyController(IMessageBus bus)
-    {
-        _bus = bus;
-    }
-
-    [HttpGet("dashboard")]
-    public IActionResult GetDashboard() => Ok(new { message = "Loyalty dashboard" });
->>>>>>> feature/notifications-logic
 }

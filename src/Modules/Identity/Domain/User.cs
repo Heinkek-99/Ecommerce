@@ -13,8 +13,6 @@ public class User
 
     private User() { }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     /// <summary>
     /// Ajoute un rôle à cet utilisateur (multi-rôle comma-separated).
     /// Idempotent : ne duplique pas si le rôle existe déjà.
@@ -32,10 +30,6 @@ public class User
     public IEnumerable<string> GetRoles() =>
         Role.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
-=======
->>>>>>> feature/orders-logic
-=======
->>>>>>> feature/notifications-logic
     public static User Create(
         string email,
         string fullName,
