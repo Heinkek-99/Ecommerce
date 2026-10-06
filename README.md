@@ -38,6 +38,13 @@ connexion et les clés Stripe se passent par variables d'environnement.
 dotnet test
 ```
 
+## Configuration
+
+Les valeurs de développement ne sont plus dans le dépôt. Le fichier `.env.example` liste les
+variables attendues : mot de passe PostgreSQL, chaînes de connexion, clé de signature JWT et clés
+Stripe. `docker-compose.yml` lit `POSTGRES_PASSWORD` et retombe sur une valeur de développement si
+elle n'est pas définie.
+
 ## État
 
 Checkout, webhooks Stripe, fidélité et notifications en place, avec tests d'intégration. Les
